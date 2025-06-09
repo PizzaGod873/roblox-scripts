@@ -33,13 +33,31 @@ local function vendItem(id, item, category, quantity)
     print("Clicked: " .. item)
 end
 
--- Food/Item Buttons
+-- Alphabetical item list (with "ExpiredBloxyCola" added)
 local itemList = {
-    "GoldenApple", "BloxyCola", "Pizza", "Apple", "Cookie", "GoldPizza", "RainbowPizza",
-    "MedKit", "Key", "GoldKey", "Louise", "Lollipop", "Chips",
-    "RainbowPizzaBox", "Book", "Bottle", "Ladder", "Battery"
+    "Apple",
+    "Battery",
+    "BloxyCola",
+    "Book",
+    "Chips",
+    "Cookie",
+    "ExpiredBloxyCola",
+    "GoldKey",
+    "GoldPizza",
+    "GoldenApple",
+    "Key",
+    "Ladder",
+    "Lollipop",
+    "Louise",
+    "MedKit",
+    "Pizza",
+    "RainbowPizza",
+    "RainbowPizzaBox",
+    "Bottle"
 }
 
+-- Add buttons for items
+table.sort(itemList)
 for _, item in ipairs(itemList) do
     itemSection:NewButton(item, "Give " .. item, function()
         giveTool(item)
