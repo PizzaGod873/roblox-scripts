@@ -165,7 +165,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 	end
 
 	local function GetBestTool()
-		for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Assets.Note.Note.Note:GetChildren()) do
+		for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Assets.Note2.Note2.Note2:GetChildren()) do
 			if v.Name:match("Circle") and v.Visible == true then
 				GiveItem(tostring(v.Name:gsub("Circle", "")))
 			end
