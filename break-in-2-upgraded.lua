@@ -712,7 +712,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 	Tab:CreateButton({
 		Name = "Get Item",
 		Callback = function()
-			GiveItem(SelectedItem)
+        print(table.concat(SelectedItem))
+			GiveItem(table.concat(SelectedItem))
 		end
 	})
 
